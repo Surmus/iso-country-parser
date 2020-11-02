@@ -17,7 +17,7 @@ func TestNewTemplateResultWriter(t *testing.T) {
 	})
 
 	t.Run("should return error when inputting invalid template", func(t *testing.T) {
-		writer, err := NewTemplateResultWriter(os.Stdout, "{CODE}, ME}")
+		writer, err := NewTemplateResultWriter(os.Stdout, "Hi, ME}")
 
 		assert.Nil(t, writer)
 		assert.NotNil(t, err)
