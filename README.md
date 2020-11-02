@@ -10,7 +10,7 @@ Parses ISO 3166 alpha-3 country codes from WIKI page into structured output
 ### Download
 Choose one of the following options:
 
-#### Download Github release from https://github.com/Surmus/tire-change-workshop/releases
+#### Download Github release from https://github.com/Surmus/iso-country-parser/releases
 ##### When running Windows
 1. Extract win64 folder contents from downloaded release.tar.gz
 2. Run application:
