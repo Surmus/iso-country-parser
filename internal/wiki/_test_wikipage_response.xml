@@ -1,0 +1,146 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+    <siteinfo>
+        <sitename>Wikipedia</sitename>
+        <dbname>enwiki</dbname>
+        <base>https://en.wikipedia.org/wiki/Main_Page</base>
+        <generator>MediaWiki 1.36.0-wmf.14</generator>
+        <case>first-letter</case>
+    </siteinfo>
+    <page>
+        <title>List of ISO 3166 country codes</title>
+        <ns>0</ns>
+        <id>58502940</id>
+        <revision>
+            <id>977378921</id>
+            <parentid>977337802</parentid>
+            <timestamp>2020-09-08T13:52:51Z</timestamp>
+            <contributor>
+                <username>LiliCharlie</username>
+                <id>14037616</id>
+            </contributor>
+            <comment>Reverted to revision 972185489 by [[Special:Contributions/LiliCharlie|LiliCharlie]] ([[User talk:LiliCharlie|talk]]): "sortable" is okay, and the list this article is named after shouldn't be collapsed</comment>
+            <model>wikitext</model>
+            <format>text/x-wiki</format>
+            <text bytes="112996" xml:space="preserve">{{short description|Wikipedia list article}}
+The [[International Organization for Standardization]] ([[International Organization for Standardization|ISO]]) created and maintains the [[ISO&amp;nbsp;3166|'''ISO&amp;nbsp;3166&amp;nbsp;standard – ''Codes for the representation of names of countries and their subdivisions''''']].&lt;ref name=ISO_3166&gt;{{cite web|url=https://www.iso.org/iso-3166-country-codes.html|title=Country Codes – ISO 3166|publisher=[[International Organization for Standardization]]|access-date=18 September 2018}}&lt;/ref&gt;  The ISO&amp;nbsp;3166 standard contains three parts:
+* '''[[ISO&amp;nbsp;3166-1]]''' – ''Codes for the representation of names of countries and their subdivisions – Part 1: Country codes''&lt;ref name=ISO_3166-1&gt;{{cite web|url=https://www.iso.org/standard/63545.html|title=ISO 3166-1:2013 Codes for the representation of names of countries and their subdivisions – Part 1: Country codes|publisher=[[International Organization for Standardization]]|access-date=18 September 2018}}&lt;/ref&gt; defines codes for the names of countries, dependent territories, and special areas of geographical interest. It defines three sets of [[country code]]s:
+** [[ISO&amp;nbsp;3166-1&amp;nbsp;alpha-2]] – two-letter country codes which are also used to create the [[ISO&amp;nbsp;3166-2]] country subdivision codes and the [[Internet]] [[country code top-level domain]]s.
+** [[ISO&amp;nbsp;3166-1&amp;nbsp;alpha-3]] – three-letter country codes which may allow a better visual association between the codes and the country names than the 3166-1 alpha-2 codes.
+** [[ISO&amp;nbsp;3166-1&amp;nbsp;numeric]] – three-digit country codes which are identical to those developed and maintained by the [[United Nations Statistics Division]], with the advantage of script ([[writing system]]) independence, and hence useful for people or systems using non-[[Latin script]]s.
+* '''[[ISO&amp;nbsp;3166-2]]''' – ''Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code''&lt;ref name=ISO_3166-2&gt;{{cite web|url=https://www.iso.org/standard/63546.html|title=ISO 3166-2:2013 Codes for the representation of names of countries and their subdivisions – Part 2: Country subdivision code|publisher=[[International Organization for Standardization]]|access-date=18 September 2018}}&lt;/ref&gt; defines codes for the names of the principal subdivisions (e.g., provinces, states, departments, regions) of all countries coded in ISO&amp;nbsp;3166-1.
+* '''[[ISO&amp;nbsp;3166-3]]''' – ''Codes for the representation of names of countries and their subdivisions – Part 3: Code for formerly used names of countries''&lt;ref name=ISO_3166-3&gt;{{cite web|url=https://www.iso.org/standard/63547.html|title=ISO 3166-3:2013 Codes for the representation of names of countries and their subdivisions – Part 3: Code for formerly used names of countries|publisher=[[International Organization for Standardization]]|access-date=18 September 2018}}&lt;/ref&gt; defines codes for country names which have been deleted from [[ISO 3166-1]] since its first publication in 1974.
+
+The ISO&amp;nbsp;3166-1 standard currently comprises 249 countries, {{UNnum}} of which are [[sovereign state]]s that are [[Member states of the United Nations|members]] of the [[United Nations]].  Many dependent territories in the ISO&amp;nbsp;3166-1 standard are also listed as a subdivision of their parent country in the ISO&amp;nbsp;3166-2 standard.
+
+==Current ISO 3166 country codes==
+The sortable table below contains the three sets of [[ISO&amp;nbsp;3166-1]] country codes for each of its 249 countries, links to the [[ISO&amp;nbsp;3166-2]] country subdivision codes, and the Internet [[country code top-level domain]]s (ccTLD) which are based on the [[ISO&amp;nbsp;3166-1&amp;nbsp;alpha-2]] standard with the few exceptions noted.  See the [[ISO&amp;nbsp;3166-3]] standard for former country codes.
+{| class="wikitable sortable"
+|-
+!colspan=1|[[ISO 3166]]&lt;ref name=ISO_3166/&gt;
+!colspan=2|
+!colspan=3|[[ISO 3166-1]]&lt;ref name=ISO_3166-1/&gt;
+!colspan=1|[[ISO 3166-2]]&lt;ref name=ISO_3166-2/&gt;
+!colspan=1|
+|-
+![[Country|Country name]]&lt;ref name=OBP&gt;{{cite web|url=https://www.iso.org/obp/ui/#search&amp;3166|title=Country Codes on the Online Browsing Plaftorm (OBP)|publisher=[[International Organization for Standardization]]|access-date=18 September 2018}}&lt;/ref&gt;
+![[State (polity)|Official state name]]&lt;ref name=CIA&gt;{{cite web|url=https://www.cia.gov/library/publications/the-world-factbook|title=The World Factbook|publisher=[[United States]] [[Central Intelligence Agency]]|access-date=18 September 2018}}&lt;/ref&gt;
+![[Sovereign state|Sovereignty]]&lt;ref name=CIA/&gt;&lt;ref name=UN&gt;{{cite web|url=http://www.un.org/en/member-states/|title=Member States|publisher=[[United Nations]]|access-date=18 September 2018}}&lt;/ref&gt;&lt;ref name=NSG&gt;{{cite web|url=https://www.un.org/en/decolonization/nonselfgovterritories.shtml|title=Non-Self-Governing Territories|publisher=[[United Nations]]|access-date=18 September 2018}}&lt;/ref&gt;
+![[ISO 3166-1 alpha-2#Officially assigned code elements|Alpha-2 code]]&lt;ref name=OBP/&gt;
+![[ISO 3166-1 alpha-3#Officially assigned code elements|Alpha-3 code]]&lt;ref name=OBP/&gt;
+![[ISO 3166-1 numeric#Officially assigned code elements|Numeric code]]&lt;ref name=OBP/&gt;
+![[ISO 3166-2|Subdivision code links]]&lt;ref name=ISO_3166-2/&gt;
+![[Country code top-level domain|Internet ccTLD]]&lt;ref name=ccTLD&gt;{{cite web|url=https://www.iana.org/domains/root/db|title=Root Zone Database|publisher=[[Internet Assigned Numbers Authority]]|access-date=18 September 2018}}&lt;/ref&gt;
+|-style="background-color:white;"
+|id=AFGH|{{flagicon|Afghanistan}}&amp;nbsp;[[Afghanistan]]
+|[[Afghanistan|The Islamic Republic of Afghanistan]]
+|align=center|[[Member states of the United Nations|UN member state]]
+|align=center|[[ISO 3166-1 alpha-2#AF|{{mono|AF}}]]
+|align=center|[[ISO 3166-1 alpha-3#AFG|{{mono|AFG}}]]
+|align=center|[[ISO 3166-1 numeric#004|{{mono|004}}]]
+|align=center|[[ISO 3166-2:AF]]
+|align=center|[[.af]]
+|-
+|id=AKRO data-sort-value=AKRO colspan=8|{{flagicon|Akrotiri and Dhekelia}}&amp;nbsp;[[Akrotiri and Dhekelia]] – See [[#UNI2|United Kingdom, The]]
+|-
+|id=ALAN data-sort-value=ALAN|{{flagicon|Åland Islands}}&amp;nbsp;[[Åland Islands]]
+|data-sort-value=Aland|[[Åland Islands|Åland]]
+|align=center|[[#FINL|Finland]]
+|align=center|[[ISO 3166-1 alpha-2#AX|{{mono|AX}}]]
+|align=center|[[ISO 3166-1 alpha-3#ALA|{{mono|ALA}}]]
+|align=center|[[ISO 3166-1 numeric#248|{{mono|248}}]]
+|align=center|[[ISO 3166-2:AX]]
+|align=center|[[.ax]]
+|-style="background-color:white;"
+|id=ALGE|{{flagicon|Algeria}}&amp;nbsp;[[Algeria]]
+|[[Algeria|The People's Democratic Republic of Algeria]]
+|align=center|UN member state
+|align=center|[[ISO 3166-1 alpha-2#DZ|{{mono|DZ}}]]
+|align=center|[[ISO 3166-1 alpha-3#DZA|{{mono|DZA}}]]
+|align=center|[[ISO 3166-1 numeric#012|{{mono|012}}]]
+|align=center|[[ISO 3166-2:DZ]]
+|align=center|[[.dz]]
+|-
+|id=ZIMB|{{flagicon|Zimbabwe}}&amp;nbsp;[[Zimbabwe]]
+|[[Zimbabwe|The Republic of Zimbabwe]]
+|align=center|UN member state
+|align=center|[[ISO 3166-1 alpha-2#ZW|{{mono|ZW}}]]
+|align=center|[[ISO 3166-1 alpha-3#ZWE|{{mono|ZWE}}]]
+|align=center|[[ISO 3166-1 numeric#716|{{mono|716}}]]
+|align=center|[[ISO 3166-2:ZW]]
+|align=center|[[.zw]]
+|}
+
+
+==See also==
+{{portal|Geography}}
+*[[International Organization for Standardization]]
+**[[ISO 3166]]
+***[[ISO 3166-1]]
+***[[ISO 3166-2]]
+***[[ISO 3166-3]]
+*[[Country code]]
+**[[International vehicle registration code]]
+*[[Lists of countries and territories]]
+**[[Sovereign state]]
+***[[List of sovereign states]]
+***[[List of states with limited recognition]]
+**[[Dependent territory]]
+**[[Timeline of historical geopolitical changes]]
+*[[United Nations]]
+**[[Member states of the United Nations]]
+**[[United Nations list of Non-Self-Governing Territories]]
+*[[Country code top-level domain]]
+**[[List of Internet top-level domains]]
+*[[List of country calling codes]] (International telephone dialing codes)
+{{clear}}
+
+==Notes==
+{{notelist}}
+
+==References==
+{{reflist}}
+
+==See also==
+* [[Comparison of alphabetic country codes]]
+* [[List of IOC country codes]]
+* [[List of FIFA country codes]]
+* [[International vehicle registration code]]
+* [[List of aircraft registration prefixes]]
+* [[List of GS1 country codes]]
+
+==External links==
+{{sister project links|ISO 3166}}
+*[https://www.iso.org The International Organization for Standardization (ISO)]
+**[https://www.iso.org/iso-3166-country-codes.html ISO 3166 Country Codes]
+***[https://www.iso.org/iso-3166-country-codes.html The ISO 3166 Maintenance Agency]
+{{ISO 3166}}
+{{Geocoding-systems}}
+
+[[Category:ISO 3166]]
+[[Category:ISO standards|#03166]]
+[[Category:Lists of countries|ISO 3166 country codes]]
+[[Category:Geography-related lists|ISO 3166 country codes]]</text>
+            <sha1>jbe62jf0l7ve7u7wyhi1yditp3ke5jw</sha1>
+        </revision>
+    </page>
+</mediawiki>

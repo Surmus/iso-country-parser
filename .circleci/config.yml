@@ -1,0 +1,90 @@
+version: 2 # use CircleCI 2.0
+
+jobs:
+  build:
+    docker: # run the steps with Docker
+      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
+      - image: surmus/golang:latest
+
+    environment: # environment variables for the build itself
+      TEST_RESULTS: /tmp/test-results # path to where test results will be saved
+
+    steps: # steps that comprise the `build` job
+      - checkout # check out source code to working directory
+      - run: mkdir -p $TEST_RESULTS # create the test results directory
+
+      - restore_cache: # restores saved cache if no changes are detected since last run
+          keys:
+            - v1-pkg-cache
+
+      # Normally, this step would be in a custom primary image;
+      # we've added it here for the sake of explanation.
+      - run: go get github.com/jstemmer/go-junit-report
+
+      - run: make
+      - run: make vet
+      - run: make fmt-check
+      - run: make lint
+
+      - run:
+          name: Run unit tests
+          # Store the results of our tests in the $TEST_RESULTS directory
+          command: |
+            trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            make test | tee ${TEST_RESULTS}/go-test.out
+
+      - save_cache: # store cache in the /go/pkg directory
+          key: v1-pkg-cache
+          paths:
+            - "/go/pkg"
+
+      # Send coverage test reports to codecov
+      - run: bash <(curl -s https://codecov.io/bash)
+      # upload test results for display in Test Summary
+      - store_test_results:
+          path: /tmp/test-results
+
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
+          # taken to be the root directory of the workspace.
+          root: ./
+          # Must be relative path from root
+          paths:
+            - ./build/linux64
+            - ./build/win64
+
+  publish_github-release:
+    docker: # run the steps with Docker
+      - image: cibuilds/github:0.10
+
+    steps:
+      - checkout
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ./
+
+      - run:
+          name: "Build release archive"
+          command: |
+            cd build && tar -zcvf release.tar.gz linux64 win64 && cd ..
+      - run:
+          name: "Publish Release on GitHub"
+          command: |
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -recreate ${CIRCLE_TAG} ./build/release.tar.gz
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /^v.*/
+      - publish_github-release:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
