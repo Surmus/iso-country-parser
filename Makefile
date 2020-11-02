@@ -1,6 +1,6 @@
 GO ?= $(shell which go)
 GOFMT := $(shell which gofmt) "-s"
-GOLINT ?= ${HOME}/go/bin/golint
+GOLINT ?= ${GOPATH}/bin/golint
 PACKAGES ?= $(shell $(GO) list ./...)
 GOFILES := $(shell find . -name "*.go" -type f)
 TESTFOLDER := $(shell $(GO) list ./... | grep -v test)
