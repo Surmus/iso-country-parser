@@ -7,32 +7,36 @@ import (
 	"regexp"
 )
 
-// matches contents of [[CONTENTS]]
-const interWikiLinkDeclarationPattern = `\[\[\s*((.|\n|\r)*?)]]`
+// matches strings which start with 'id=SOMEID' and end with '[[ISO 3166-2:XX]]' 'XX' being alpha-2 country code
+const countriesTableRowPattern = `id=\s*(.|\n|\r)*?\[\[ISO 3166-2:[A-Z]{2}]]`
 
 // WikiPageParser converts data from Wiki page into countries list
 type WikiPageParser struct {
-	page *wiki.Page
-
-	interWikiLinkMatcher *regexp.Regexp
-	countryCodeMatcher   *regexp.Regexp
+	page                     *wiki.Page
+	countryRowParser         *countriesTableRowParser
+	countriesTableRowMatcher *regexp.Regexp
 }
 
 // NewWikiPageParser creates new parser for given Wiki page
 func NewWikiPageParser(page *wiki.Page) *WikiPageParser {
 	return &WikiPageParser{
-		interWikiLinkMatcher: regexp.MustCompile(interWikiLinkDeclarationPattern),
-		countryCodeMatcher:   regexp.MustCompile(isoAlpha3CountryCodePattern),
-		page:                 page,
+		countriesTableRowMatcher: regexp.MustCompile(countriesTableRowPattern),
+		page:                     page,
+		countryRowParser:         newCountriesTableRowParser(),
 	}
 }
 
 // Parse parses Wiki page contents into list of countries, if no countries are found from page empty slice is returned
 func (p *WikiPageParser) Parse() []*internal.Country {
+	var result []*internal.Country
 	logrus.Info("begin parsing wiki page content")
-	links := p.interWikiLinkMatcher.FindAllStringSubmatch(p.page.Text, -1)
-	logrus.Debugf("found %d interwiki links", len(links))
-	linkParser := newInterWikiLinkParser(links)
+	countryRows := p.countriesTableRowMatcher.FindAllString(p.page.Text, -1)
 
-	return linkParser.parse()
+	for _, row := range countryRows {
+		if country := p.countryRowParser.parse(row); country != nil {
+			result = append(result, country)
+		}
+	}
+	logrus.Infof("found %d countries from wiki page", len(result))
+	return result
 }
