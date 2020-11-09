@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	version                    = "v1.0.1"
+	version                    = "v1.0.2"
 	countriesWikiPageIDFlag    = "page-id"
 	defaultCountriesWikiPageID = "List_of_ISO_3166_country_codes"
 	resultTemplateFlag         = "template"
